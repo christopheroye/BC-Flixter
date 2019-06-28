@@ -62,5 +62,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "bootstrap_form", ">= 4.2.0"
-gem 'bootstrap', '~> 4.3.1'
-gem "bundler", "2.0.1"
+gem "bootstrap", '~> 4.3.1'
+gem 'bundler', '~> 2.0', '>= 2.0.1'
