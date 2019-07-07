@@ -1,16 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700|Roboto:300,400,500,700&display=swap');
 @import "bootstrap";
 
 
 .navbar {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 200;
   box-shadow: 0px 1px 3px #2a2a2a;
-  background: image_url('cyan-pentagonal-background.png');
+  background-color: #000000;
 }
 
+
+.navbar-inverse, a.navbar-brand {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  color: white;
+}
+
+
 .hero {
-  background: image_url('bailey-zindel-NRQV-hBF10M-unsplash.jpg') no-repeat center center fixed;
+  background: image_url('manuel-cosentino-uh6HxXVbqUE-unsplash.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -31,19 +39,21 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 
 .frosty h1 {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 100;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 .frosty h2 {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 200;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
 .btn {
   border-radius: 0;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .feature {
@@ -54,7 +64,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 body {
   background-color: #f5f5f5;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -76,13 +86,19 @@ body {
 html, body {
   height: 100%;
 }
+
+
 body {
   display: flex;
   flex-direction: column;
 }
+
+
 .content {
   flex: 1 0 auto;
 }
+
+
 .footer {
   flex-shrink: 0;
 }
@@ -92,4 +108,8 @@ body {
   background-color: #FFEEEE;
   border-radius: 3px;
   padding: 2px 8px 2px 8px;
+}
+
+.clr {
+  clear: both;
 }

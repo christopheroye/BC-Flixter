@@ -69,4 +69,3 @@ gem 'simple_form'
 gem 'devise'
 gem "font-awesome-rails"
 gem 'jquery-rails'
-gem 'tether-rails'
