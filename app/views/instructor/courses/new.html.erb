@@ -1,6 +1,7 @@
 <br />
-<dic class="booyah-box col 10 offset-1">
+<div class="booyah-box col 10 offset-1">
   <h1>Add a new course</h1>
+  <br />
   <%= simple_form_for @course, url: instructor_courses_path do |f| %>
     <%= f.input :title %>
     <%= f.input :description %>
@@ -10,4 +11,5 @@
     <br />
   <% end %>
   <br />
-</dic>
+</div>
+</div>

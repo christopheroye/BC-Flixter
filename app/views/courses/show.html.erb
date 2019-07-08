@@ -1,13 +1,13 @@
 <br />
 
 <div class="booyah-box col-10 offset-1">
-  <h1><%= course.title %></h1>
+  <h1><%= @courses.title %></h1>
   <br />
   <br />
 <div class="row">
   <div class="col-sm-4 col-12 text-center">
     <span class="badge badge-default">
-    <%= number_to_currency @course.cost %>
+    <%= number_to_currency @courses.cost %>
   </span>
 
   <% if current_user && current_user == @course.user %>
@@ -19,7 +19,7 @@
   <br />
 
   <div class="col-sm-8 col-12">
-    <%= @course.description %>
+    <%= @courses.description %>
   </div>
 </div>
 </div>
