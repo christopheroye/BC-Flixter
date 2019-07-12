@@ -70,3 +70,7 @@ gem 'devise'
 gem "font-awesome-rails"
 gem 'jquery-rails'
 gem "aws-sdk-s3", require: false
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.3.3'
+end
