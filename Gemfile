@@ -69,10 +69,9 @@ gem 'simple_form'
 gem 'devise'
 gem "font-awesome-rails"
 gem 'jquery-rails'
-gem 'carrierwave', '>= 2.0.0.rc', '< 3.0'
+gem 'carrierwave', '~> 1.0'
 gem 'figaro'
 gem 'fog-aws'
-gem "aws-sdk-s3", require: false
 
 
 source 'https://rails-assets.org' do
