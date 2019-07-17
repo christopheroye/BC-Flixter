@@ -1,6 +1,7 @@
 <br />
 <div class="booyah-box col-10 offset-1">
   <h1 class="text-center"><%= current_course.title %></h1>
+  <%= image_tag course.image.url, class: 'img-fluid' %>
   <br />
   <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
   <br class="clr" />
@@ -13,7 +14,8 @@
     <% current_course.sections.each do |section| %>
       <li>
         <%= section.title %>
-        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
+        <%= link_to 'New Section', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
+        <br class="clr" />
       </li>
     <% end %>
   </ul>

@@ -4,6 +4,8 @@ class CreateLessons < ActiveRecord::Migration[5.0]
       t.string :title
       t.string :subtitle
       t.integer :section_id
+      t.string :image
+      
       t.timestamps
     end
     add_index :lessons, :section_id
