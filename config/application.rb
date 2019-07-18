@@ -1,5 +1,4 @@
 require_relative 'boot'
-require 'carrierwave/processing/mini_magick'
 require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
