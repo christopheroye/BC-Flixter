@@ -1,5 +1,5 @@
 class AddVideoToLessons < ActiveRecord::Migration[5.2]
   def change
-    add_column :courses, :videos, :string
+    add_column :lessons, :video, :string
   end
 end
