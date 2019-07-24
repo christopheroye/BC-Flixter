@@ -1,7 +1,8 @@
 class Lesson < ApplicationRecord
   mount_uploader :video, VideoUploader
-
-  
   belongs_to :section
-  has_many :videos
+
+  include RankedModel
+  ranks :row_order, with_same: :section_id
+  
 end
