@@ -21,7 +21,7 @@
     <% end %>
   <br />
   <br />
-  <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right' %>
+  <%= link_to 'Preview As Student...', course_path(current_course), class: 'btn btn-warning float-right btn-sm' %>
   <br class="clr" />
 
   <div class="text-center">
@@ -29,23 +29,41 @@
   </div>
   <br />
   <br />
-  <ul>
-    <% current_course.sections.each do |section| %>
-      <li>
-        <%= section.title %>
-      <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
-        <ul class="lessons">
-          <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url=<%= instructor_lesson_path(lesson) %>>
+  <ul class="sections-center col-10">
+  <% current_course.sections.each do |section| %>
+  <div class="header col-10 offset-1">
+    <span class="fas fa-ellipsis-v"></span>
+    <%= section.title %>
+  </div>
+    <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
+    <br class="clr" />
+    <br class="clr" />
+    <ul class="lessons">
+      <% section.lessons.rank(:row_order).each do |lesson| %>
+        <li data-update-url="<%= instructor_lesson_path lesson %>">
+          <div class="row">
+               <div class="col-1">
+                <br />
+                <span class="fa fa-ellipsis-v"></span>
+               </div>
+                 <div class="col-11 text-center">
+                <p>
               <b><%= lesson.title %></b>
-              -
-              <%= lesson.subtitle %>
-            </li>
-          <% end %>
-        </ul>
+              </p>
+              <br />
+              <p>
+             <%= lesson.subtitle %>
+              </p>
+              </div>
+               </div>
+              <br class="clr" />
+             </li>
+           <% end %>
+          </ul>
         <br class="clr" />
       </li>
     <% end %>
   </ul>
+
 
 </div>
