@@ -60,8 +60,8 @@
   </div>
 
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-sm float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
-  Add Lesson
+<button type="button" class="btn btn-primary btn-sm float-right new-lesson-button" data-toggle="modal" data-target="#LessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+  Add a Lesson
 </button>
 
     <br class="clr" />
@@ -132,7 +132,6 @@
       </div>
       <%= simple_form_for @lesson, url: "#", html: {id: 'newLessonForm' } do |f| %>
       <div class="modal-body">
-        <%= simple_form_for @lesson, url: "#" do |f| %>
           <%= f.input :title %>
           <%= f.input :subtitle %>
           <%= f.input :video %>
