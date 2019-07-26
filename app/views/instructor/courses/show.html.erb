@@ -1,34 +1,31 @@
 <script>
   $(function() {
 
-    $('.new-lesson-button').click(function( event ) {
-      var lessonURL = $(event.target).data('lessons-url');
-      $('#newLessonForm').attr('action', lessonUrl);
+    $('#newLessonForm').attr('action', lessonURL);
     });
 
-
+  $(function() {
     $('.lessons').sortable({
       update: function( event, ui ) {
         $.ajax({
           type: 'PUT',
           url: ui.item.data('update-url'),
           dataType: 'json',
-          data: { lesson: { row_order_position: ui.item.index() } }
+          data: { lesson: { row_order_position: ui.item.index() }}
         });
       }
     });
-
-  $('.sections').sortable({
+  });
+  $(function() {
+    $('.sections').sortable({
       update: function( event, ui ) {
         $.ajax({
           type: 'PUT',
           url: ui.item.data('update-url'),
           dataType: 'json',
-          data: { section: { row_order_position: ui.item.index() } }
+          data: { section: { row_order_position: ui.item.index() }}
         });
       }
-    });
-
   });
 
 </script>
@@ -60,7 +57,7 @@
   </div>
 
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-sm float-right new-lesson-button" data-toggle="modal" data-target="#LessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+<button type="button" class="btn btn-primary btn-sm float-right new-lesson-button" data-toggle="modal" data-target="#newLessonModal" data-lesson-url="<%= instructor_lesson_path(section) %>">
   Add a Lesson
 </button>
 
@@ -97,7 +94,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="newSectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="newSectionModal" tabindex="-1" role="dialog" aria-labelledby="newSectionModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -121,7 +118,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="newLessonModalLabel" aria-hidden="true">
+<div class="modal fade" id="newLessonModal" tabindex="-1" role="dialog" aria-labelledby="newLessonModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
