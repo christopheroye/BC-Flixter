@@ -77,6 +77,8 @@ gem 'carrierwave-aws'
 gem 'stripe'
 gem 'ranked-model'
 gem 'jquery-ui-rails'
+gem 'sassc'
+gem "nokogiri", ">= 1.6.7.rc"
 
 
 source 'https://rails-assets.org' do

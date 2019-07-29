@@ -1,0 +1,19 @@
+current directory: /vagrant/src/flixter/path/ruby/2.5.0/gems/bcrypt-3.1.13/ext/mri
+/home/vagrant/.rbenv/versions/2.5.3/bin/ruby -r ./siteconf20190727-24460-crva5a.rb extconf.rb
+creating Makefile
+
+current directory: /vagrant/src/flixter/path/ruby/2.5.0/gems/bcrypt-3.1.13/ext/mri
+make "DESTDIR=" clean
+
+current directory: /vagrant/src/flixter/path/ruby/2.5.0/gems/bcrypt-3.1.13/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+gcc  -D__SKIP_GNU -I/home/vagrant/.rbenv/versions/2.5.3/include     -c -o x86.o x86.S
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.so
+
+current directory: /vagrant/src/flixter/path/ruby/2.5.0/gems/bcrypt-3.1.13/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20190727-24460-1xmjw79

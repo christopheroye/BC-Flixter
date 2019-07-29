@@ -1,11 +1,34 @@
 class LessonsController < ApplicationController
-  def show
+  before_action :authenticate_user!
+  before_action :require_enrollment_for_current_lesson
+
+  def create
+    @lessons = current_lesson.section.course(course params)
+    if @lesson.valid?
+      redirect_to_instructor_courses_path(@lessons)
+    end
+  end
+
+  def
+    @lesson = Lesson.find(params[:id])
   end
 
   private
 
-  helper_method :current_lesson
-  def current_lesson
-    @current_lesson ||= Lesson.find(params[:id])
-  end
-end
+    def require_authorized_for_current_lesson
+      if current_lesson.user != current_user
+          redirect_to course_sections, alert: 'Error Message Here'
+      end
+    end
+
+    def require_enrollment_for_current_lesson
+      if !current_user.enrolled_in?(current_lesson.section.course)
+          redirect_to course_path(current_lesson.section.course), alert: "Must be enrolled to view lesson."
+        end
+    end
+
+
+    helper_method :current_lesson
+    def current_lesson
+      @current_lesson ||= Lesson.find(params[:id])
+    end
