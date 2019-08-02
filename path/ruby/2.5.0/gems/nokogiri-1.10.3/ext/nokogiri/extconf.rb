@@ -455,6 +455,7 @@ when using_system_libraries?
   dir_config('xml2').any?  or package_config('libxml-2.0')
   dir_config('xslt').any?  or package_config('libxslt')
   dir_config('exslt').any? or package_config('libexslt')
+  
 
   check_libxml_version or abort "ERROR: cannot discover where libxml2 is located on your system. please make sure `pkg-config` is installed."
   check_libxml_version("2.6.21") or abort "ERROR: libxml2 version 2.6.21 or later is required!"

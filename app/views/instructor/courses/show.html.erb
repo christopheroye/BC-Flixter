@@ -52,7 +52,7 @@
   <br />
   <br />
    <ul class="sections col-9">
-  <% current_course.sections.each do |section| %>
+  <% current_course.sections.rank(:row_order).each do |section| %>
     <div class="header float-left offset-1">
       <span class="fas fa-ellipsis-v"></span>
       <%= section.title %>
