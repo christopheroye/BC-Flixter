@@ -78,6 +78,3 @@ gem 'sassc'
 gem "nokogiri", ">= 1.6.7.rc"
 
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-tether', '>= 1.3.3'
-end
