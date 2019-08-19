@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
   before_action :require_enrollment_for_current_lesson
 
   def create
-    @lessons = current_lesson.section.course(course params)
+    @lessons = current_lesson.section.course(course_params)
     if @lesson.valid?
       redirect_to_instructor_courses_path(@lessons)
     end

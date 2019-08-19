@@ -9,6 +9,11 @@ class Instructor::SectionsController < ApplicationController
     redirect_to instructor_course_path(current_course)
   end
 
+  def update
+    current_section.update_attributes(section_params)
+    render plain: 'ok!'
+  end
+
   private
 
   def require_authorized_for_current_section
@@ -33,6 +38,6 @@ class Instructor::SectionsController < ApplicationController
   end
 
   def section_params
-    params.require(:section).permit(:title)
+    params.require(:section).permit(:title, :row_order_position)
   end
 end
