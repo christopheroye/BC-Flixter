@@ -9,7 +9,7 @@ class LessonsController < ApplicationController
     end
   end
 
-  def
+  def show
     @lesson = Lesson.find(params[:id])
   end
 
